@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:text="@string/bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:textSize="35dp"
+        android:textColor="@color/title"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/result"
+        android:text="@string/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/body"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="25dp"
+        >
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+
+        >
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="90pt"
+            android:layout_height="wrap_content"
+            android:hint="Enter your weight"
+            android:inputType="numberDecimal">
+
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weight"
+            android:text="@string/kg"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp"
+            android:id="@+id/hint1"
+            android:paddingEnd="100dp"
+
+            >
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="90pt"
+            android:layout_height="wrap_content"
+            android:hint="Enter your height"
+            android:inputType="numberDecimal"
+            android:layout_toEndOf="@+id/weight">
+
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/height"
+            android:text="@string/m"
+            android:layout_toEndOf="@+id/hint1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:padding="15dp"
+        android:longClickable="true"
+        android:onClick="calculateBMI"
+        android:id="@+id/btn1"
+        android:background="@color/HEX"
+        android:textColor="@color/colorAccent"></Button>
+
+
+
+
+
+</LinearLayout>
+
